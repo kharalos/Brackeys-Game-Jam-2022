@@ -3,12 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Customer
+  - Staff
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Don't Render
   - Water
   - UI
   - 
