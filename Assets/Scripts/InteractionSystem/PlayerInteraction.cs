@@ -59,6 +59,7 @@ public class PlayerInteraction : MonoBehaviour
             ResetInteraction();
         }
     }
+    //dasa
 
     private void ResetInteraction()
     {
@@ -77,6 +78,7 @@ public class PlayerInteraction : MonoBehaviour
                 if (Input.GetKeyDown(key))
                 {
                     interactable.Interact();
+
                 }
                 break;
             case Interactable.InteractionType.Hold:
