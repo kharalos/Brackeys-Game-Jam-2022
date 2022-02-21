@@ -48,37 +48,30 @@ public class PlayerControls : MonoBehaviour
             Vector3 camRotation = new Vector3(0, Camera.main.transform.rotation.eulerAngles.y, 0);
             Matrix4x4 m = Matrix4x4.Rotate(Quaternion.Euler(camRotation));
 
-
-
-            if (Up) {
-                Vector3 dir = m.MultiplyVector(Vector3.forward);
-                cc.Move(dir * forwardSpeed * Time.deltaTime);
-            }
-            else if (Down) {
-                Vector3 dir = m.MultiplyVector(Vector3.back);
-                cc.Move(dir * backSpeed * Time.deltaTime);
-            }
-
-            if (Left) {
-                if (ControlCamera) {
-                    Vector3 dir = m.MultiplyVector(Vector3.left);
-                    transform.position += dir * forwardSpeed * Time.deltaTime;
+            if (!ControlCamera) {
+                if (Up) {
+                    Vector3 dir = m.MultiplyVector(Vector3.forward);
+                    cc.Move(dir * forwardSpeed * Time.deltaTime);
                 }
-                else {
-                    transform.Rotate(new Vector3(0, -rotationSpeed * Time.deltaTime, 0));
+                else if (Down) {
+                    Vector3 dir = m.MultiplyVector(Vector3.back);
+                    cc.Move(dir * backSpeed * Time.deltaTime);
                 }
+                if (Left) transform.Rotate(new Vector3(0, -rotationSpeed * Time.deltaTime, 0));
+                if (Right) transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime, 0));
             }
-            if (Right) {
-                if (ControlCamera) {
-                    Vector3 dir = m.MultiplyVector(Vector3.right);
-                    transform.position += dir * forwardSpeed * Time.deltaTime;
-                }
-                else {
-                    transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime, 0));
-                }
-            }
+            else {
+                Vector3 dir = Vector3.zero;
+                if (Up) dir += new Vector3(0, 0, 1);
+                if (Left) dir += new Vector3(-1, 0, 0);
+                if (Down) dir += new Vector3(0, 0, -1);
+                if (Right) dir += new Vector3(1, 0, 0);
+                dir = dir.normalized;
+                dir = m.MultiplyVector(dir);
 
-            if (ControlCamera) {
+                if (Down) cc.Move(dir * backSpeed * Time.deltaTime);
+                else cc.Move(dir * forwardSpeed * Time.deltaTime);
+
                 transform.rotation = Quaternion.Euler(camRotation);
             }
 
