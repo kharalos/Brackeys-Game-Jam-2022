@@ -56,10 +56,15 @@ public class PlayerInteraction : MonoBehaviour
         }
         else if (!_successfulHit)
         {
-            interactionText.text = "";
-            interactionHoldGO.SetActive(false);
-            interactionClickGO.SetActive(false);
+            ResetInteraction();
         }
+    }
+
+    private void ResetInteraction()
+    {
+        interactionText.text = "";
+        interactionHoldGO.SetActive(false);
+        interactionClickGO.SetActive(false);
     }
 
     void HandleInteraction(Interactable interactable)
@@ -84,6 +89,7 @@ public class PlayerInteraction : MonoBehaviour
                         successfulHit = false;
                         interactable.Interact();
                         interactable.ResetHoldTime();
+                        ResetInteraction();
                     }
 
                 }
