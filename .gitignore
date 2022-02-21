@@ -4,7 +4,11 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
-
+Logs/
+EditorUserSettings.asset
+AndroidLogcatSettings.asset
+Obj/
+UnityGenerated/
 # Visual Studio cache directory
 .vs/
 
@@ -24,6 +28,15 @@ ExportedObj/
 *.pdb
 *.opendb
 *.VC.db
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db.meta
 
 # Unity3D generated meta files
 *.pidb.meta
