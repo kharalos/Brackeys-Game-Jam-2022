@@ -9,7 +9,7 @@ public enum AIStateId {
     Scared,
     Chase
 }
-
+ 
 public interface AIState {
     AIStateId GetId();
     void Enter(AIAgent agent);
