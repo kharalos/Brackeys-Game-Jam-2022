@@ -1,9 +1,10 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class LightSwitch : Interactable
 {
 
-    public Light m_Light; // im using m_Light name since 'light' is already a variable used by unity
+    public List<Light> m_Light; // im using m_Light name since 'light' is already a variable used by unity
     public bool isOn;
 
 
@@ -14,7 +15,8 @@ public class LightSwitch : Interactable
 
     void UpdateLight()
     {
-        m_Light.enabled = isOn;
+        foreach (var light in m_Light)
+            light.enabled = isOn;        
     }
 
     public override string GetDescription()
