@@ -1,17 +1,16 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-/// Taken from https://answers.unity.com/questions/1489636/third-person-wow-like-camera.html
 public class PlayerCamera : MonoBehaviour {
     public Transform target;
 
     public float targetHeight = 1.7f;
     public float distance = 5.0f;
-    public float offsetFromWall = 0.1f;
 
     public float maxDistance = 20;
     public float minDistance = .6f;
-    public float speedDistance = 5;
+    //public float speedDistance = 5;
 
     public float xSpeed = 200.0f;
     public float ySpeed = 200.0f;
@@ -21,21 +20,18 @@ public class PlayerCamera : MonoBehaviour {
 
     public int zoomRate = 40;
 
-    public float rotationDampening = 3.0f;
     public float zoomDampening = 5.0f;
 
-    public LayerMask collisionLayers = -1;
-
-    private float xDeg = 0.0f;
-    private float yDeg = 0.0f;
+    [SerializeField] float xDeg = 0.0f;
+    [SerializeField] private float yDeg = 0.0f;
     private float currentDistance;
     private float desiredDistance;
     private float correctedDistance;
 
     void Start() {
-        Vector3 angles = transform.eulerAngles;
-        xDeg = angles.x;
-        yDeg = angles.y;
+        //Vector3 angles = transform.eulerAngles;
+        //xDeg = angles.x;
+        //yDeg = angles.y;
 
         currentDistance = distance;
         desiredDistance = distance;
@@ -62,18 +58,11 @@ public class PlayerCamera : MonoBehaviour {
                 xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
                 yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
             }
-
-            // otherwise, ease behind the target if any of the directional keys are pressed
-            else if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0) {
-                float targetRotationAngle = target.eulerAngles.y;
-                float currentRotationAngle = transform.eulerAngles.y;
-                xDeg = Mathf.LerpAngle(currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime);
-            }
         }
 
-
         // calculate the desired distance
-        desiredDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate * Mathf.Abs(desiredDistance) * speedDistance;
+        //desiredDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate * Mathf.Abs(desiredDistance);
+        desiredDistance -= Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * zoomRate;
         desiredDistance = Mathf.Clamp(desiredDistance, minDistance, maxDistance);
 
         yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit);
@@ -86,23 +75,10 @@ public class PlayerCamera : MonoBehaviour {
         vTargetOffset = new Vector3(0, -targetHeight, 0);
         Vector3 position = target.position - (rotation * Vector3.forward * desiredDistance + vTargetOffset);
 
-        // check for collision using the true target's desired registration point as set by user using height
-        RaycastHit collisionHit;
-        Vector3 trueTargetPosition = new Vector3(target.position.x, target.position.y, target.position.z) - vTargetOffset;
 
-        // if there was a collision, correct the camera position and calculate the corrected distance
-        bool isCorrected = false;
-        if (Physics.Linecast(trueTargetPosition, position, out collisionHit, collisionLayers.value)) {
-            // calculate the distance from the original estimated position to the collision location,
-            // subtracting out a safety "offset" distance from the object we hit.  The offset will help
-            // keep the camera from being right on top of the surface we hit, which usually shows up as
-            // the surface geometry getting partially clipped by the camera's front clipping plane.
-            correctedDistance = Vector3.Distance(trueTargetPosition, collisionHit.point) - offsetFromWall;
-            isCorrected = true;
-        }
-
-        // For smoothing, lerp distance only if either distance wasn't corrected, or correctedDistance is more than currentDistance
-        currentDistance = !isCorrected || correctedDistance > currentDistance ? Mathf.Lerp(currentDistance, correctedDistance, Time.deltaTime * zoomDampening) : correctedDistance;
+        // For smoothing, lerp distance if correctedDistance is more than currentDistance
+        //currentDistance = correctedDistance > currentDistance ? Mathf.Lerp(currentDistance, correctedDistance, Time.deltaTime * zoomDampening) : correctedDistance;
+        currentDistance = Mathf.Lerp(currentDistance, correctedDistance, Time.deltaTime * zoomDampening);
 
         // keep within legal limits
         currentDistance = Mathf.Clamp(currentDistance, minDistance, maxDistance);
