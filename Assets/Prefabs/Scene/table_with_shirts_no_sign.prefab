@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3761153548265248025}
   - component: {fileID: 260530022157376188}
   - component: {fileID: 2628239494428700278}
+  - component: {fileID: 4936320295661647873}
   m_Layer: 0
   m_Name: table_with_shirts_no_sign
   m_TagString: Untagged
@@ -92,3 +93,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4936320295661647873
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4573860160329256867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.025279902, y: 0.051869005, z: 0.029521912}
+  m_Center: {x: 0.000000009778887, y: 0.00000001955777, z: 0.014760956}
