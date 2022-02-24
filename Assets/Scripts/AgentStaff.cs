@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AgentStaff : AIAgent
 {
-        private Vector3 pos;
+    private Vector3 pos;
     void Start()
     {
         pos = transform.position;

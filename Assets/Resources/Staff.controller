@@ -9,7 +9,7 @@ AnimatorController:
   m_Name: Staff
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: velocity
+  - m_Name: speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -93,23 +93,23 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 6b776257b10aa4846b61b077384097d3, type: 3}
+    m_Motion: {fileID: -203655887218126122, guid: 16e57ca3764d4b54f8985065d29a9f39, type: 3}
     m_Threshold: 0.5
-    m_Position: {x: 0, y: 0.5}
+    m_Position: {x: 0, y: 1.4}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 75b9f4e9eca9deb4bb624fe047ce23bf, type: 3}
+    m_Motion: {fileID: -203655887218126122, guid: 618c1aa610941134c909947e6a2d874c, type: 3}
     m_Threshold: 1
-    m_Position: {x: 0, y: 1}
+    m_Position: {x: 0, y: 5}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
-  m_BlendParameter: velocity
-  m_BlendParameterY: velocity
+  m_BlendParameter: speed
+  m_BlendParameterY: speed
   m_MinThreshold: 0
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1
