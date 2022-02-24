@@ -7,7 +7,8 @@ public enum AIStateId {
     Patrol,
     Running,
     Scared,
-    Chase
+    Chase,
+    Interaction
 }
  
 public interface AIState {

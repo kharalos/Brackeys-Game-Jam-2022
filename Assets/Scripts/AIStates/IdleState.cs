@@ -17,6 +17,9 @@ public class IdleState : AIState
         if(agent.patrolPoints.Length > 0){
             if(timer < 0.0f) agent.stateMachine.ChangeState(AIStateId.Patrol); 
         }
+        else if(agent.interactionPoints.Length > 0){
+            if(timer < 0.0f) agent.stateMachine.ChangeState(AIStateId.Interaction); 
+        }
     }
     public void Exit(AIAgent agent){
         timer = 0;

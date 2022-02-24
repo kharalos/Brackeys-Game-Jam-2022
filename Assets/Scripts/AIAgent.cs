@@ -10,11 +10,13 @@ public class AIAgent : MonoBehaviour
     [HideInInspector] public NavMeshAgent navAgent;
     [HideInInspector] public Animator animator;
     public Transform[] patrolPoints;
+    public Transform[] interactionPoints;
     public Vector3 targetLoc;
     [HideInInspector] public Transform player;
 
     void Start()
     {
+
         navAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -24,6 +26,7 @@ public class AIAgent : MonoBehaviour
         stateMachine.RegisterState(new RunningState());
         stateMachine.RegisterState(new ScaredState());
         stateMachine.RegisterState(new ChaseState());
+        stateMachine.RegisterState(new InteractionState());
         stateMachine.ChangeState(initialState);
     }
 
