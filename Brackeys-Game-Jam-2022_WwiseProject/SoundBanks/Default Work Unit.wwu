@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5875FFD9-67A7-4EA9-97B1-B7FF52F25A59}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{5875FFD9-67A7-4EA9-97B1-B7FF52F25A59}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{B2A6C741-0718-425E-9BE8-3A7AB372B366}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Ambience_4" ID="{BCD281AC-F3A7-40B4-BD56-C81C6447C8D7}" WorkUnitID="{2C9ECEA1-FB54-452D-9297-1253D5BAC063}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ghost_Move" ID="{4DD7BBDC-6A2D-4428-BC2C-8A5049EED26D}" WorkUnitID="{2C9ECEA1-FB54-452D-9297-1253D5BAC063}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Light_Switch" ID="{3DD52996-683A-4614-A9B8-A9E0730B5425}" WorkUnitID="{2C9ECEA1-FB54-452D-9297-1253D5BAC063}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience_2" ID="{AA708BD5-E042-49AE-A046-2638DB77AB01}" WorkUnitID="{2C9ECEA1-FB54-452D-9297-1253D5BAC063}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience_3" ID="{D62475ED-B7E5-4A55-BEBE-C392B38D9778}" WorkUnitID="{2C9ECEA1-FB54-452D-9297-1253D5BAC063}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambience_1" ID="{AA20033A-CFA2-4E13-9838-21D7D57E4979}" WorkUnitID="{2C9ECEA1-FB54-452D-9297-1253D5BAC063}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

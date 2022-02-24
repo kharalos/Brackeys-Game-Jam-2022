@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	902834635	Play_Ambience_4			\Default Work Unit\Play_Ambience_4	
+	902834636	Play_Ambience_3			\Default Work Unit\Play_Ambience_3	
+	902834637	Play_Ambience_2			\Default Work Unit\Play_Ambience_2	
+	902834638	Play_Ambience_1			\Default Work Unit\Play_Ambience_1	
+	1241030149	Play_Light_Switch			\Default Work Unit\Play_Light_Switch	
+	1534074897	Play_Ghost_Move			\Default Work Unit\Play_Ghost_Move	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	454642428	Ghost Move	C:\Users\konst\Documents\GitHub\Brackeys-Game-Jam-2022\Brackeys-Game-Jam-2022_WwiseProject\.cache\Mac\SFX\Ghost Move_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghost Move		705664
+	463884609	Ambience 3	C:\Users\konst\Documents\GitHub\Brackeys-Game-Jam-2022\Brackeys-Game-Jam-2022_WwiseProject\.cache\Mac\SFX\Ambience 3_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience 3		5644864
+	579464005	Ambience 1	C:\Users\konst\Documents\GitHub\Brackeys-Game-Jam-2022\Brackeys-Game-Jam-2022_WwiseProject\.cache\Mac\SFX\Ambience 1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience 1		5644864
+	834574478	Ambience 4	C:\Users\konst\Documents\GitHub\Brackeys-Game-Jam-2022\Brackeys-Game-Jam-2022_WwiseProject\.cache\Mac\SFX\Ambience 4_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience 4		5644864
+	956748199	Ambience 2	C:\Users\konst\Documents\GitHub\Brackeys-Game-Jam-2022\Brackeys-Game-Jam-2022_WwiseProject\.cache\Mac\SFX\Ambience 2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience 2		5644864
+	1000853798	Light Switch 1	C:\Users\konst\Documents\GitHub\Brackeys-Game-Jam-2022\Brackeys-Game-Jam-2022_WwiseProject\.cache\Mac\SFX\Light Switch 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Light Switch\Light Switch 1		376672
+	1007751127	Light Switch 2	C:\Users\konst\Documents\GitHub\Brackeys-Game-Jam-2022\Brackeys-Game-Jam-2022_WwiseProject\.cache\Mac\SFX\Light Switch 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Light Switch\Light Switch 2		213404
+
