@@ -28,14 +28,11 @@ public class Customer : MonoBehaviour
             if (currentFright < 0) currentFright = 0;
         }
         uiBar.UpdateBarPercentFill(currentFright / maxFright);
-        
-
-
     }
 
     public void ScareMe(float amount) {
         if (isPermanentlyScared) return;
-        Debug.Log($"I got scared by {amount} amount");
+        //Debug.Log($"I got scared by {amount} amount");
         currentFright += amount;
         if (currentFright >= maxFright) {
             PermanentlyScared();
@@ -43,7 +40,7 @@ public class Customer : MonoBehaviour
     }
 
     public void PermanentlyScared() {
-        Debug.Log("Screw this, I'm outta here!");
+        //Debug.Log("Screw this, I'm outta here!");
         isPermanentlyScared = true;
         fillBarImage.color = Color.red;
     }
