@@ -145,11 +145,34 @@ MonoBehaviour:
   - {fileID: 2863083288673511764}
   - {fileID: -8037928457696316787}
   - {fileID: 1734155259956406209}
-  - {fileID: 7372744239764290690}
+  - {fileID: 299934908032144057}
   - {fileID: 4038154070664536798}
   - {fileID: 1419555867997453020}
   - {fileID: 6570565702834925936}
   - {fileID: -9066975015648373859}
+--- !u!114 &299934908032144057
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  lift:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  gamma:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  gain:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
 --- !u!114 &1419555867997453020
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -325,12 +348,12 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   gaussianStart:
-    m_OverrideState: 0
-    m_Value: 10
+    m_OverrideState: 1
+    m_Value: 40
     min: 0
   gaussianEnd:
-    m_OverrideState: 0
-    m_Value: 30
+    m_OverrideState: 1
+    m_Value: 80
     min: 0
   gaussianMaxRadius:
     m_OverrideState: 0
@@ -369,26 +392,3 @@ MonoBehaviour:
     m_Value: 0
     min: -180
     max: 180
---- !u!114 &7372744239764290690
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
-  m_Name: LiftGammaGain
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  lift:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 0.943486, z: 0.9743193, w: 0}
-  gamma:
-    m_OverrideState: 1
-    m_Value: {x: 0.9932087, y: 1, z: 0.9864176, w: 0}
-  gain:
-    m_OverrideState: 1
-    m_Value: {x: 0.90763044, y: 0.9169095, z: 1, w: 0}
