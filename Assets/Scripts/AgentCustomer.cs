@@ -5,8 +5,10 @@ using UnityEngine.AI;
 
 public class AgentCustomer : AIAgent
 {
+    private Vector3 pos;
     void Start()
     {
+        pos = transform.position;
         navAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -20,6 +22,8 @@ public class AgentCustomer : AIAgent
     void Update()
     {
         stateMachine.Update();
+        animator.SetFloat("speed", ((transform.position - pos) / Time.deltaTime).magnitude);
+        pos = transform.position;
     }
 
 }
