@@ -21,6 +21,11 @@ namespace AK
         static const AkUniqueID PLAY_LIGHT_SWITCH = 1241030149U;
     } // namespace EVENTS
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID GHOSTMOVING = 1998017376U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
