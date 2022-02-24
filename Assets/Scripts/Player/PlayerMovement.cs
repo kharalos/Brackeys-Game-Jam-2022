@@ -10,10 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float modelRotateSpeed = 10;
     
     CharacterController cc;
-    PlayerInput input;
-
+    
     private void Awake() {
-        input = GetComponent<PlayerInput>();
         cc = GetComponent<CharacterController>();
     }
     
@@ -22,10 +20,10 @@ public class PlayerMovement : MonoBehaviour
         {
             //get desired movement vector.
             Vector3 dir = Vector3.zero;
-            if (input.Up)       dir += new Vector3(0, 0, 1);
-            if (input.Left)     dir += new Vector3(-1, 0, 0);
-            if (input.Down)     dir += new Vector3(0, 0, -1);
-            if (input.Right)    dir += new Vector3(1, 0, 0);
+            if (PlayerInput.Up)       dir += new Vector3(0, 0, 1);
+            if (PlayerInput.Left)     dir += new Vector3(-1, 0, 0);
+            if (PlayerInput.Down)     dir += new Vector3(0, 0, -1);
+            if (PlayerInput.Right)    dir += new Vector3(1, 0, 0);
             dir = dir.normalized;
 
             //transform movement vector by camera rotation.y and apply movement.
