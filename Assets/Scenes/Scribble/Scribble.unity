@@ -1468,7 +1468,7 @@ MonoBehaviour:
   interactionClickGO: {fileID: 1028758767}
   interactionHoldGO: {fileID: 1070054900}
   interactionHoldProgress: {fileID: 1070054902}
-  CanvasGO: {fileID: 0}
+  CanvasGO: {fileID: 1831352260}
   successfulHit: 0
 --- !u!114 &387451510
 MonoBehaviour:
@@ -6142,6 +6142,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b31f732a2ed57fa4080a2dfd1dd3c028, type: 3}
+--- !u!1 &1831352260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1172476605615047819, guid: 98c2119e51079aa478677618bc760d49, type: 3}
+  m_PrefabInstance: {fileID: 2028520560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1831352261 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5036730065136304739, guid: 98c2119e51079aa478677618bc760d49, type: 3}
+  m_PrefabInstance: {fileID: 2028520560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1844954673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6668,6 +6678,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2320833679513586553, guid: 98c2119e51079aa478677618bc760d49, type: 3}
+      propertyPath: CanvasPlacement
+      value: 
+      objectReference: {fileID: 1831352261}
     - target: {fileID: 2320833679513586553, guid: 98c2119e51079aa478677618bc760d49, type: 3}
       propertyPath: interactionType
       value: 1
