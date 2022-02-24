@@ -49,7 +49,7 @@ public class ScareAbility : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Customer" || other.gameObject.tag == "Staff") {
+        if (other.gameObject.tag == "Customer") {
             collidersInsideTriggerZone.Add(other);
         }
     }

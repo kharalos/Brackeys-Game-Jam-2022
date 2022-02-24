@@ -34,6 +34,7 @@ public class Customer : MonoBehaviour
     }
 
     public void ScareMe(float amount) {
+        if (isPermanentlyScared) return;
         Debug.Log($"I got scared by {amount} amount");
         currentFright += amount;
         if (currentFright >= maxFright) {
