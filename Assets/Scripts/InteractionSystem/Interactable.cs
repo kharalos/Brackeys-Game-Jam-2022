@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Interactable : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public abstract class Interactable : MonoBehaviour
     float holdTime;
 
     public InteractionType interactionType;
+
+    public UnityEvent OnInteract;
+
+    public Transform CanvasPlacement;
 
     public abstract string GetDescription();
     public abstract void Interact();

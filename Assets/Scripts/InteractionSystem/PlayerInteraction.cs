@@ -10,7 +10,7 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject interactionClickGO;
     public GameObject interactionHoldGO; // the ui parent to disable when not interacting
     public Image interactionHoldProgress; // the progress bar for hold interaction type
-
+    public GameObject CanvasGO;
     Camera cam;
     public bool successfulHit = false;
     Interactable i;
@@ -38,7 +38,7 @@ public class PlayerInteraction : MonoBehaviour
                     }
                 }*/
 
-        if (successfulHit && Input.GetKey(key))
+        if (successfulHit)
             HandleInteraction(i);
     }
 
@@ -48,6 +48,7 @@ public class PlayerInteraction : MonoBehaviour
         if (_successfulHit)
         {
             i = interactable;
+            CanvasGO.transform.position = i.CanvasPlacement.position;
             interactionText.text = interactable.GetDescription();
             //successfulHit = true;
             //Debug.Log("E");
@@ -78,7 +79,7 @@ public class PlayerInteraction : MonoBehaviour
                 if (Input.GetKeyDown(key))
                 {
                     interactable.Interact();
-
+                    UpdateUI(true, interactable);
                 }
                 break;
             case Interactable.InteractionType.Hold:
