@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6242406981883080650}
   - component: {fileID: 6242406981883080661}
   - component: {fileID: 6242406981883080663}
-  - component: {fileID: 6242406981883080662}
-  - component: {fileID: 6717084701410804246}
-  - component: {fileID: 1152735643614458730}
+  - component: {fileID: 865621582}
+  - component: {fileID: 865621583}
+  - component: {fileID: 4972498109667739924}
   m_Layer: 0
   m_Name: Camera with UI cam
   m_TagString: MainCamera
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6242406981883080657}
-  m_LocalRotation: {x: 0.5989292, y: -0, z: -0, w: 0.80080205}
+  m_LocalRotation: {x: 0.5989327, y: 0, z: 0, w: 0.8007994}
   m_LocalPosition: {x: -1.5725851, y: 13.7, z: 1.081919}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -59,7 +59,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.04
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &6242406981883080662
+--- !u!114 &865621582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,27 +122,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6242406981883080657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a113aaec982e753448fc5bd99c33d9e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b1187857391b3140b11ad78a4d25858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  targetHeight: 1.7
-  distance: 5
-  offsetFromWall: 0.1
-  maxDistance: 20
-  minDistance: 0.6
-  speedDistance: 5
-  xSpeed: 200
-  ySpeed: 200
-  yMinLimit: -40
-  yMaxLimit: 80
-  zoomRate: 40
-  rotationDampening: 5
-  zoomDampening: 5
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &6717084701410804246
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &865621583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +136,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6242406981883080657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af46264ad146e624abea617c024ade37, type: 3}
+  m_Script: {fileID: 11500000, guid: 075ce185780b9f943850a3c1efa038df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_listeners:
@@ -164,7 +149,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &1152735643614458730
+--- !u!114 &4972498109667739924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,11 +158,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 6242406981883080657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1fc19af8c74ecf4a8ffae83ec222bdc, type: 3}
+  m_Script: {fileID: 11500000, guid: 84edca436d661db48b003e833681c5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
+  target: {fileID: 0}
+  targetHeight: 1.7
+  distance: 15
+  maxDistance: 25
+  minDistance: 10
+  xSpeed: 200
+  ySpeed: 200
+  yMinLimit: 40
+  yMaxLimit: 40
+  zoomRate: 600
+  zoomDampening: 5
+  xDeg: 200
+  yDeg: 40
 --- !u!1 &6242406982587991563
 GameObject:
   m_ObjectHideFlags: 0

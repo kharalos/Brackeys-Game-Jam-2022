@@ -12,5 +12,12 @@ public class InteractableEvent : Interactable
     {
         OnInteract.Invoke();
     }
-
+    public void EnableChildrenRB()
+    {
+        Rigidbody[] rbs = transform.GetComponentsInChildren<Rigidbody>();
+        for (int i = 0; i < rbs.Length; i++)
+        {
+            rbs[i].isKinematic = false;
+        }
+    }
 }
