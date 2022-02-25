@@ -31,6 +31,9 @@ public abstract class Interactable : MonoBehaviour
         PlayerInteraction player = other.GetComponent<PlayerInteraction>();
         if (player)
         {
+            if (ScareAbility.InteractablesWithinPlayer.Contains(this) == false)
+                ScareAbility.InteractablesWithinPlayer.Add(this);
+
             player.UpdateUI(true, this);
         }
     }
@@ -39,6 +42,9 @@ public abstract class Interactable : MonoBehaviour
         PlayerInteraction player = other.GetComponent<PlayerInteraction>();
         if (player)
         {
+            if (ScareAbility.InteractablesWithinPlayer.Contains(this) == true)
+                ScareAbility.InteractablesWithinPlayer.Remove(this);
+
             player.UpdateUI(false, this);
         }
     }
