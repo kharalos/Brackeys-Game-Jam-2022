@@ -26,8 +26,8 @@ public class LightSwitch : Interactable
 
     public override void Interact()
     {
-        OnInteract.Invoke();
         isOn = !isOn;
+        OnInteract.Invoke();
         UpdateLight();
     }
 }

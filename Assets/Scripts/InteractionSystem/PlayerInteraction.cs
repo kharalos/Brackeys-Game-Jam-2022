@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerInteraction : MonoBehaviour
 {
-
+    
     public float interactionDistance;
     public bool enableRaycast;
     public TextMeshProUGUI interactionText;
@@ -14,7 +14,6 @@ public class PlayerInteraction : MonoBehaviour
     Camera cam;
     public bool successfulHit = false;
     Interactable i;
-    KeyCode key = KeyCode.E;
     void Start()
     {
         cam = Camera.main;
@@ -76,19 +75,24 @@ public class PlayerInteraction : MonoBehaviour
         {
             case Interactable.InteractionType.Click:
                 // interaction type is click and we clicked the button -> interact
-                if (Input.GetKeyDown(key))
+                if (PlayerInput.InteractKeyDown)
                 {
+
                     interactable.Interact();
                     UpdateUI(true, interactable);
+
                 }
                 break;
             case Interactable.InteractionType.Hold:
-                if (Input.GetKey(key))
+                if (PlayerInput.InteractKey)
                 {
                     // we are holding the key, increase the timer until we reach 1f
                     interactable.IncreaseHoldTime();
                     if (interactable.GetHoldTime() > 1f)
                     {
+                        if (ScareAbility.InteractablesWithinPlayer.Contains(interactable) == true)
+                            ScareAbility.InteractablesWithinPlayer.Remove(interactable);
+
                         successfulHit = false;
                         interactable.Interact();
                         interactable.ResetHoldTime();

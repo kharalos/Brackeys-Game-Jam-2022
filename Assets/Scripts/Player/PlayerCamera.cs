@@ -54,7 +54,7 @@ public class PlayerCamera : MonoBehaviour {
 
         // If either mouse buttons are down, let the mouse govern camera position
         if (GUIUtility.hotControl == 0) {
-            if (Input.GetMouseButton(0) || Input.GetMouseButton(1)) {
+            if (PlayerInput.ControlCamera) {
                 xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
                 yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
             }
