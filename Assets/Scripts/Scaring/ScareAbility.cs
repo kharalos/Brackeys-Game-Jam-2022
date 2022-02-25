@@ -17,11 +17,17 @@ public class ScareAbility : MonoBehaviour {
     [SerializeField] float maxMana = 100;
     [SerializeField] float startingMana = 20;
     [SerializeField] float manaRegen = 10;
-    
+
+    [SerializeField] List<AudioClip> scareSounds;
+    [SerializeField] float scareSound_pitchMin = 1;
+    [SerializeField] float scareSound_pitchMax = 1;
+    [SerializeField] AudioSource audioSource_scareSounds;
+
     public float CurrentMana { get; private set; }
     public float CurrentScareCooldown { get; private set; }
 
     List<Collider> collidersInsideTriggerZone = new List<Collider>();
+    
 
     /// <summary>
     /// if there is enough mana, it will spend the amount and return true.
@@ -59,6 +65,11 @@ public class ScareAbility : MonoBehaviour {
                 CurrentScareCooldown += scareCooldown;
 
                 OnScareAttack?.Invoke();
+
+                //scare audio
+                audioSource_scareSounds.clip = scareSounds[UnityEngine.Random.Range(0, scareSounds.Count)];
+                audioSource_scareSounds.pitch = UnityEngine.Random.Range(scareSound_pitchMin, scareSound_pitchMax);
+                audioSource_scareSounds.Play();
             }
         }
 
