@@ -7841,6 +7841,7 @@ MonoBehaviour:
   interactionClickGO: {fileID: 1171463095}
   interactionHoldGO: {fileID: 1171463092}
   interactionHoldProgress: {fileID: 1171463093}
+  CanvasGO: {fileID: 0}
   successfulHit: 0
 --- !u!54 &2123612863
 Rigidbody:
