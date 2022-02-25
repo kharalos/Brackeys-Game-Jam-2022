@@ -19,6 +19,7 @@ public class ActorAnim : MonoBehaviour {
     AnimancerState currentState;
 
     private void Start() {
+        AnimancerLayer.SetMaxStateDepth(1000);
         ScareAbility.OnScareAttack += () => {
             isPlayingScareAnim = true;
             anim.Play(scare).Events.OnEnd = () => {
