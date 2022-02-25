@@ -25,5 +25,15 @@ public class AgentCustomer : AIAgent
         animator.SetFloat("speed", ((transform.position - pos) / Time.deltaTime).magnitude);
         pos = transform.position;
     }
+    public void Scared()
+    {
+        targetLoc = GetRandomCover(FindObjectOfType<CoverPlacesHandler>().coverPlaces).position;
+        stateMachine.ChangeState(AIStateId.Scared); 
+    }
+
+    Transform GetRandomCover(Transform[] objects)
+    {
+        return objects[Random.Range(0, objects.Length)];
+    }
 
 }

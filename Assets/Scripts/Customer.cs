@@ -12,11 +12,14 @@ public class Customer : MonoBehaviour
     
     [SerializeField] Image fillBarImage;
 
+    private AgentCustomer agent;
+
     float currentFright = 0;
     bool isPermanentlyScared = false;
 
     private void Start() {
         uiBar.UpdateBarPercentFill(currentFright/maxFright);
+        agent = GetComponent<AgentCustomer>();
     }
 
     // Update is called once per frame
@@ -43,5 +46,12 @@ public class Customer : MonoBehaviour
         //Debug.Log("Screw this, I'm outta here!");
         isPermanentlyScared = true;
         fillBarImage.color = Color.red;
+        agent.Scared();
+    }
+
+    public void ResetFright()
+    {
+        currentFright = 0;
+        isPermanentlyScared = false;
     }
 }

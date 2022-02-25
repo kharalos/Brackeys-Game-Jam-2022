@@ -38,4 +38,8 @@ public class AIAgent : MonoBehaviour
     public void Example(){
         stateMachine.ChangeState(AIStateId.Idle);
     }
+
+    public Vector3 FindExit(){
+        return GameObject.FindWithTag("Exit").transform.position;
+    }
 }
