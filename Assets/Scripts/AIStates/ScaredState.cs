@@ -7,18 +7,46 @@ public class ScaredState : AIState
     public AIStateId GetId(){
         return AIStateId.Scared;
     }
-    private float timer;
+    private float timer = 6f;
+    private float frightenedTime = 0;
+    private bool reachedPlace = false;
     public void Enter(AIAgent agent){
-        timer = Random.Range(2f,3f);
+        frightenedTime++;
+
+        reachedPlace = false;
+        
+        agent.navAgent.speed = 5f;
+        if(frightenedTime > 1){
+            agent.navAgent.SetDestination(agent.FindExit());
+        }
+        else{
+            agent.navAgent.SetDestination(agent.targetLoc);
+        }
     }
     public void Update(AIAgent agent){
-        timer -= Time.deltaTime;
-        if(timer < 0.0f) agent.stateMachine.ChangeState(AIStateId.Scared); 
-        if(Vector3.Distance(agent.player.position, agent.transform.position) > 4f){
-            agent.stateMachine.ChangeState(AIStateId.Idle);
+        if (!agent.navAgent.pathPending)
+        {
+            if (agent.navAgent.remainingDistance <= agent.navAgent.stoppingDistance)
+            {
+                if (!agent.navAgent.hasPath || agent.navAgent.velocity.sqrMagnitude == 0f)
+                {
+                    if(!reachedPlace){
+                        reachedPlace = true;
+                        agent.animator.SetTrigger("scared");
+                    }
+                    else{
+                        timer -= Time.deltaTime;
+                    }
+                    if(timer < 0)
+                    {
+                        agent.stateMachine.ChangeState(AIStateId.Idle);
+                        agent.GetComponent<Customer>().ResetFright();
+                    }
+                }
+            }
         }
     }
     public void Exit(AIAgent agent){
-        timer = 0;
+        agent.animator.SetTrigger("idle");
     }
 }

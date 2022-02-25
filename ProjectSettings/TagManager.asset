@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Customer
   - Staff
+  - Cover
+  - Exit
   layers:
   - Default
   - TransparentFX

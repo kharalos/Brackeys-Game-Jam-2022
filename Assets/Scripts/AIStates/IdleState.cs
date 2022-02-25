@@ -10,7 +10,7 @@ public class IdleState : AIState
     }
 
     public void Enter(AIAgent agent){
-        
+        agent.navAgent.speed = 1f;
     }
     public void Update(AIAgent agent){
         timer -= Time.deltaTime;
