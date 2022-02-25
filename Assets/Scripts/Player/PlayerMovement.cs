@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float modelRotateSpeed = 10;
     
     CharacterController cc;
+
+    public static bool IsMoving { get; private set; }
     
     private void Awake() {
         cc = GetComponent<CharacterController>();
     }
-    
+
     private void Update() {
         //Handle PlayerMovement
         {
@@ -25,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
             if (PlayerInput.Down)     dir += new Vector3(0, 0, -1);
             if (PlayerInput.Right)    dir += new Vector3(1, 0, 0);
             dir = dir.normalized;
+
+            //handle isplayermoving
+            if (dir == Vector3.zero) IsMoving = false;
+            else IsMoving = true;
 
             //transform movement vector by camera rotation.y and apply movement.
             Vector3 rotation = new Vector3(0, Camera.main.transform.rotation.eulerAngles.y, 0);

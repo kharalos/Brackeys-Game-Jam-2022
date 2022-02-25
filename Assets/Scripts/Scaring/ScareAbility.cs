@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,7 @@ using UnityEngine;
 public class ScareAbility : MonoBehaviour {
 
     public static List<Interactable> InteractablesWithinPlayer = new List<Interactable>();
-
-    [SerializeField] AK.Wwise.Event myEvent;
+    public static event Action OnScareAttack;
 
     [SerializeField] float scareAmount = 30;
     [SerializeField] float scareCooldown = 1;
@@ -57,6 +57,8 @@ public class ScareAbility : MonoBehaviour {
                 }
                 CurrentMana -= manaCost_scare;
                 CurrentScareCooldown += scareCooldown;
+
+                OnScareAttack?.Invoke();
             }
         }
 
