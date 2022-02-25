@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float gravity = 5;
     [SerializeField] float modelRotateSpeed = 10;
     
+    [SerializeField] AudioSource runSound;
+    
     CharacterController cc;
 
     public static bool IsMoving { get; private set; }
@@ -46,6 +48,14 @@ public class PlayerMovement : MonoBehaviour
 
             //gravity
             cc.Move(Vector3.down * Time.deltaTime * gravity);
+
+            //audio
+            if (IsMoving && !runSound.isPlaying) {
+                runSound.Play();
+            }
+            if (!IsMoving && runSound.isPlaying) {
+                runSound.Stop();
+            }
         }
     }
 }
