@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -21,10 +24,13 @@ public class GameManager : MonoBehaviour {
     [SerializeField] float scoreAnimScaleDownRate = 1;
     [Header("popup")]
     [SerializeField] GameObject popupTextPrefab;
-    //[SerializeField] float popupDuration;
-    //[SerializeField] float popupSizeIncreaseOverTime;
+    [Header("GameLoop")]
+    [SerializeField] GameObject retryScreenUI;
+    [SerializeField] TMP_Text scoreText;
+    [SerializeField] Button retryButton;
+    
 
-    float currentScore = 0;
+    public float currentScore = 0;
     float currentTimer;
     public event Action OnTimerReachesZero;
     public event Action OnScoreIncrease;
@@ -68,6 +74,26 @@ public class GameManager : MonoBehaviour {
 
     }
 
+    public void ReloadScene() {
+        //StartCoroutine(SceneSwitch());
+        //IEnumerator SceneSwitch() {
+        //    Time.timeScale = 1;
+        //    Scene scene = SceneManager.GetActiveScene();
+        //    AsyncOperation load = SceneManager.UnloadSceneAsync(scene);
+        //    yield return load;
+        //    yield return null;
+        //    SceneManager.LoadScene(scene.name);
+        //}
+
+        StartCoroutine(SceneSwitch());
+        IEnumerator SceneSwitch(){
+            var load = SceneManager.LoadSceneAsync(2);
+            yield return load;
+            SceneManager.LoadSceneAsync(0);
+            
+        }
+    }
+
     private void Awake() {
         //enforce singleton
         if (_instance != null && _instance != this)
@@ -96,6 +122,11 @@ public class GameManager : MonoBehaviour {
             timerUIBar.UpdateBarPercentFill(currentTimer / maxTimer);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) SpawnPopupText(new Vector3(0, 3, 0), $"+10 Happiness");
+        //handle gameloop
+        if (currentTimer <= 0) {
+            //Time.timeScale = 0;
+            retryScreenUI.SetActive(true);
+            scoreText.text = $"Score: {currentScore}!";
+        }
     }
 }

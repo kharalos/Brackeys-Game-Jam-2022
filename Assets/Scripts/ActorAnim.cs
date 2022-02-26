@@ -66,5 +66,6 @@ public class ActorAnim : MonoBehaviour {
             if (PlayerMovement.IsMoving)    anim.Play(run,0.25f, FadeMode.FixedSpeed);
             else                            anim.Play(idle,0.25f, FadeMode.FixedSpeed);
         }
+
     }
 }
