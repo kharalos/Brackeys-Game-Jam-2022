@@ -15788,6 +15788,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4608285940215619157, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608285940215619157, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
       propertyPath: runSound
       value: 
       objectReference: {fileID: 490941807}
@@ -15938,6 +15942,18 @@ PrefabInstance:
       propertyPath: timerUIBar
       value: 
       objectReference: {fileID: 1506509462}
+    - target: {fileID: 2216309470736944201, guid: b7a99cfff87d4ef41b0e41c54bc928aa, type: 3}
+      propertyPath: popupDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216309470736944201, guid: b7a99cfff87d4ef41b0e41c54bc928aa, type: 3}
+      propertyPath: popupTextPrefab
+      value: 
+      objectReference: {fileID: 5918233751652446558, guid: 1fef39d6f31578948a0cc811429ed125, type: 3}
+    - target: {fileID: 2216309470736944201, guid: b7a99cfff87d4ef41b0e41c54bc928aa, type: 3}
+      propertyPath: popupSizeIncreaseOverTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4376636524193788055, guid: b7a99cfff87d4ef41b0e41c54bc928aa, type: 3}
       propertyPath: m_RootOrder
       value: 0

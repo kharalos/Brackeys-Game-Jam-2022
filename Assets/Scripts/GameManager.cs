@@ -19,11 +19,23 @@ public class GameManager : MonoBehaviour {
     public float scoreIncreaseAmount = 10;
     [SerializeField] float scoreAnimScaleFactor = 1.5f;
     [SerializeField] float scoreAnimScaleDownRate = 1;
+    [Header("popup")]
+    [SerializeField] GameObject popupTextPrefab;
+    //[SerializeField] float popupDuration;
+    //[SerializeField] float popupSizeIncreaseOverTime;
 
     float currentScore = 0;
     float currentTimer;
     public event Action OnTimerReachesZero;
     public event Action OnScoreIncrease;
+
+    public void SpawnPopupText(Vector3 position, string text) {
+        var popupText = GameObject.Instantiate(popupTextPrefab, position, Quaternion.identity);
+        var c = popupText.GetComponentInChildren<PopupText>();
+        c.text = text;
+        //c.duration = popupDuration;
+        //c.sizeIncrease = popupSizeIncreaseOverTime;
+    }
 
     public void IncreaseTimer() {
         currentTimer += timerIncreaseAmount;
@@ -83,5 +95,7 @@ public class GameManager : MonoBehaviour {
             //update UI
             timerUIBar.UpdateBarPercentFill(currentTimer / maxTimer);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space)) SpawnPopupText(new Vector3(0, 3, 0), $"+10 Happiness");
     }
 }

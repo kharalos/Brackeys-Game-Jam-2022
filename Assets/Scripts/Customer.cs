@@ -41,6 +41,10 @@ public class Customer : MonoBehaviour
             PermanentlyScared();
             GameManager.Instance.IncreaseTimer();
             GameManager.Instance.IncreaseScore();
+            //popuptext
+            var v = transform.position;
+            v.y = 5; 
+            GameManager.Instance.SpawnPopupText(v,$"+{GameManager.Instance.timerIncreaseAmount} Happiness");
         }
     }
 
