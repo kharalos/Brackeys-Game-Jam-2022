@@ -16016,6 +16016,18 @@ PrefabInstance:
       propertyPath: scareParticles
       value: 
       objectReference: {fileID: 1723616421}
+    - target: {fileID: 3979689809837279088, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
+      propertyPath: giggleSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e637732e2752e8746a0ff267ed023510, type: 3}
+    - target: {fileID: 3979689809837279088, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
+      propertyPath: giggleSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 79f7852ed5b352646ac7fdf6565fcfdd, type: 3}
+    - target: {fileID: 3979689809837279088, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
+      propertyPath: giggleSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: df3d3f87a8860c64f81d103e528ace24, type: 3}
     - target: {fileID: 4029483971755747778, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
       propertyPath: m_RootOrder
       value: 9
