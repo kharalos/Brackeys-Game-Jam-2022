@@ -4138,7 +4138,7 @@ AudioSource:
   m_GameObject: {fileID: 557114390}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 3831148920972911444, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+  OutputAudioMixerGroup: {fileID: 8118251759728919505, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -16398,15 +16398,15 @@ PrefabInstance:
     - target: {fileID: 3979689809837279088, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
       propertyPath: giggleSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: c44e8af32c6a42d42ae8d8b2d95a6dee, type: 3}
+      objectReference: {fileID: 8300000, guid: c583e74103a3fdb47a058cc519e49d91, type: 3}
     - target: {fileID: 3979689809837279088, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
       propertyPath: giggleSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 4f994351fc8c4ba4d808f39cf70e1ee4, type: 3}
+      objectReference: {fileID: 8300000, guid: b9b9bc2681a4a5b459b8da4cfd8e0a04, type: 3}
     - target: {fileID: 3979689809837279088, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
       propertyPath: giggleSounds.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 88822e4734d2f4a4f9ff61e4bb7a3533, type: 3}
+      objectReference: {fileID: 8300000, guid: 21446c5fb18a7ba439ec86ac3573885b, type: 3}
     - target: {fileID: 4029483971755747778, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
       propertyPath: m_RootOrder
       value: 9
