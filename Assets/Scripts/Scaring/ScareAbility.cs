@@ -70,7 +70,7 @@ public class ScareAbility : MonoBehaviour {
                 && InteractablesWithinPlayer.Count == 0) {
 
                 foreach (var item in collidersInsideTriggerZone) {
-                    Debug.Log($"Boo! {item.gameObject.name}");
+                    //Debug.Log($"Boo! {item.gameObject.name}");
                     item.GetComponent<Customer>().ScareMe(scareAmount);
                 }
                 CurrentMana -= manaCost_scare;

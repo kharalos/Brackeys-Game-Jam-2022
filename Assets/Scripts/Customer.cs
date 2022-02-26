@@ -11,6 +11,12 @@ public class Customer : MonoBehaviour
     [SerializeField] float frightDecayRate = 3;
     
     [SerializeField] Image fillBarImage;
+    [Space]
+    [SerializeField] AudioSource source;
+    [SerializeField] List<AudioClip> scareClips;
+    [SerializeField] List<AudioClip> frightClips;
+    [SerializeField] float pitchMin = 0.9f;
+    [SerializeField] float pitchMax = 1.1f;
 
     private AgentCustomer agent;
 
@@ -43,9 +49,21 @@ public class Customer : MonoBehaviour
             GameManager.Instance.IncreaseScore();
             //popuptext
             var v = transform.position;
-            v.y = 5; 
+            v.y += 5;
             GameManager.Instance.SpawnPopupText(v,$"+{GameManager.Instance.timerIncreaseAmount} Happiness");
+            //Audio big scare
+            PlayRandomAudio(frightClips);
         }
+        else {
+            //audio small scare
+            PlayRandomAudio(scareClips);
+        }
+    }
+
+    public void PlayRandomAudio(List<AudioClip> clips) {
+        source.clip = clips[Random.Range(0, clips.Count)];
+        source.pitch = Random.Range(pitchMin, pitchMax);
+        source.Play();
     }
 
     public void PermanentlyScared() {

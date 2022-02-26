@@ -90,18 +90,21 @@ public class PlayerInteraction : MonoBehaviour
                         ScareAbility.InteractablesWithinPlayer.Remove(interactable);
                     }
 
-                    StartCoroutine(RespawnAfterDelay());
-                    IEnumerator RespawnAfterDelay() {
-                        GameObject go = ((InteractableEvent)interactable).prefab;
-                        var i = interactable.transform;
-                        Vector3 pos = i.position;
-                        Quaternion rot = i.rotation;
-                        yield return new WaitForSeconds(2);
 
-                        Destroy(interactable.gameObject);
-                        var newGo = GameObject.Instantiate(go,pos,rot);
-                        newGo.SetActive(true);
-                    }
+                    ///Respawn Interactables. Disabled cuz bugs.
+                    //StartCoroutine(RespawnAfterDelay());
+                    //IEnumerator RespawnAfterDelay() {
+                    //    GameObject go = ((InteractableEvent)interactable).prefab;
+                    //    var i = interactable.transform;
+                    //    Vector3 pos = i.position;
+                    //    Quaternion rot = i.rotation;
+                    //    yield return new WaitForSeconds(2);
+                    //
+                    //    Destroy(interactable.gameObject);
+                    //    var newGo = GameObject.Instantiate(go,pos,rot);
+                    //    newGo.SetActive(true);
+                    //    newGo.GetComponent<SphereCollider>().enabled = true;
+                    //}
                 }
                 break;
             case Interactable.InteractionType.Hold:

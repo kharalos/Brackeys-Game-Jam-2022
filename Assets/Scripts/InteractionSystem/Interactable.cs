@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,7 +16,12 @@ public abstract class Interactable : MonoBehaviour
     public InteractionType interactionType;
 
     public UnityEvent OnInteract;
-
+    //so ugly.
+    ////public event Action<Vector3> OnInteractNonUnity;
+    ////public void Invoke_OnInteractNonUnity(Vector3 forceDirection) {
+    ////    OnInteractNonUnity?.Invoke(forceDirection);
+    ////}
+    //--------------
     public Transform CanvasPlacement;
 
     public Transform AIInteractPoint;

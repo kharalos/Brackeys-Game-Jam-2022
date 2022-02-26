@@ -16189,7 +16189,7 @@ PrefabInstance:
       objectReference: {fileID: 1566394068}
     - target: {fileID: 2216309470736944201, guid: b7a99cfff87d4ef41b0e41c54bc928aa, type: 3}
       propertyPath: maxTimer
-      value: 3
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2216309470736944201, guid: b7a99cfff87d4ef41b0e41c54bc928aa, type: 3}
       propertyPath: scoreText
