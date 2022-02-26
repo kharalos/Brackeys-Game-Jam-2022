@@ -53,6 +53,8 @@ public class PlayerInteraction : MonoBehaviour
             //Debug.Log("E");
             interactionClickGO.SetActive(interactable.interactionType == Interactable.InteractionType.Click);
             interactionHoldGO.SetActive(interactable.interactionType == Interactable.InteractionType.Hold);
+            
+            interactionHoldGO.SetActive(true);
         }
         else if (!_successfulHit)
         {
@@ -79,8 +81,13 @@ public class PlayerInteraction : MonoBehaviour
                 {
 
                     interactable.Interact();
-                    UpdateUI(true, interactable);
+                    //UpdateUI(true, interactable);
+                    UpdateUI(false, interactable);
 
+
+                    if (ScareAbility.InteractablesWithinPlayer.Contains(interactable)) {
+                        ScareAbility.InteractablesWithinPlayer.Remove(interactable);
+                    }
                 }
                 break;
             case Interactable.InteractionType.Hold:

@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6825976298c73f14f9c0708879d4de99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionType: 1
+  interactionType: 0
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -101,6 +101,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   CanvasPlacement: {fileID: 1664922265798517236}
+  AIInteractPoint: {fileID: 0}
 --- !u!82 &6157308805544883993
 AudioSource:
   m_ObjectHideFlags: 0

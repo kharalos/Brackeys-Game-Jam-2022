@@ -24,9 +24,9 @@ public class DebugUI : MonoBehaviour
     }
 
     void OnGUI() {
-        GUI.Label(new Rect(10, 10, 100, 20), $"fps: {fps}");
+        GUI.Label(new Rect(1000, 10, 100, 20), $"fps: {fps}");
         #if UNITY_EDITOR
-        GUI.Label(new Rect(10, 30, 100, 20), $"verts: {verts}k");
+        GUI.Label(new Rect(1000, 30, 100, 20), $"verts: {verts}k");
         #endif
     }
 }

@@ -5,7 +5,8 @@ public class InteractableEvent : Interactable
 {
     public override string GetDescription()
     {
-        return "Hold to interact";
+        //return "Hold to interact";
+        return "";
         //return "Press <b>[E]</b> to turn interact";
     }
 

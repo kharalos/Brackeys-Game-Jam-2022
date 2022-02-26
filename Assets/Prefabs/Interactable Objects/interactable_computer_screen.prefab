@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6825976298c73f14f9c0708879d4de99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionType: 1
+  interactionType: 0
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -235,6 +235,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   CanvasPlacement: {fileID: 5137681323340779904}
+  AIInteractPoint: {fileID: 0}
 --- !u!82 &6517409764117364638
 AudioSource:
   m_ObjectHideFlags: 0
@@ -345,7 +346,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pitchMin: 1
   pitchMax: 1
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 28ac6d390603a4940986e14598265ba8, type: 3}
+  - {fileID: 8300000, guid: 68308520ebc028042ad52de3f9861077, type: 3}
 --- !u!1001 &3187132147100252066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -369,6 +372,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 2.49
       objectReference: {fileID: 0}
+    - target: {fileID: 7159182978174977001, guid: feb1e188b2830d847bd3220229f1cc89, type: 3}
+      propertyPath: interactable
+      value: 
+      objectReference: {fileID: 5137681322470987687}
     - target: {fileID: 8695450763368792598, guid: feb1e188b2830d847bd3220229f1cc89, type: 3}
       propertyPath: m_RootOrder
       value: 2

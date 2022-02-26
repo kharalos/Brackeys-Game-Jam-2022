@@ -22,6 +22,11 @@ public class ScareAbility : MonoBehaviour {
     [SerializeField] float scareSound_pitchMin = 1;
     [SerializeField] float scareSound_pitchMax = 1;
     [SerializeField] AudioSource audioSource_scareSounds;
+    [SerializeField] ParticleSystem scareParticles;
+    [SerializeField] List<AudioClip> giggleSounds;
+    [SerializeField] AudioSource audioSource_giggleSounds;
+    [SerializeField] float giggleSound_pitchMin = .9f;
+    [SerializeField] float giggleSound_pitchMax = 1.1f;
 
     public float CurrentMana { get; private set; }
     public float CurrentScareCooldown { get; private set; }
@@ -43,6 +48,13 @@ public class ScareAbility : MonoBehaviour {
     private void Start() {
         CurrentMana = startingMana;
         CurrentScareCooldown = 0;
+
+        GameManager.Instance.OnScoreIncrease += () => {
+            audioSource_giggleSounds.clip = giggleSounds[UnityEngine.Random.Range(0, giggleSounds.Count)];
+            audioSource_giggleSounds.pitch = UnityEngine.Random.Range(giggleSound_pitchMin, giggleSound_pitchMax);
+            audioSource_giggleSounds.Play();
+        };
+
     }
 
     private void Update() {
@@ -70,6 +82,8 @@ public class ScareAbility : MonoBehaviour {
                 audioSource_scareSounds.clip = scareSounds[UnityEngine.Random.Range(0, scareSounds.Count)];
                 audioSource_scareSounds.pitch = UnityEngine.Random.Range(scareSound_pitchMin, scareSound_pitchMax);
                 audioSource_scareSounds.Play();
+                //scare fx
+                scareParticles.Play();
             }
         }
 

@@ -40,6 +40,7 @@ public class Customer : MonoBehaviour
         if (currentFright >= maxFright) {
             PermanentlyScared();
             GameManager.Instance.IncreaseTimer();
+            GameManager.Instance.IncreaseScore();
         }
     }
 
