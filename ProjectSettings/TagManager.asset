@@ -8,6 +8,9 @@ TagManager:
   - Staff
   - Cover
   - Exit
+  - StaffPatrol
+  - CustomerPatrol
+  - InteractionPoint
   layers:
   - Default
   - TransparentFX

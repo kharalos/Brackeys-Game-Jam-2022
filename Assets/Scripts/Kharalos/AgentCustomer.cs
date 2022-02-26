@@ -27,7 +27,7 @@ public class AgentCustomer : AIAgent
     }
     public void Scared()
     {
-        targetLoc = GetRandomCover(FindObjectOfType<CoverPlacesHandler>().coverPlaces).position;
+        targetLoc = GetRandomCover(FindObjectOfType<MapPointsManager>().coverPlaces).position;
         stateMachine.ChangeState(AIStateId.Scared); 
     }
 

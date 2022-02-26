@@ -7,7 +7,7 @@ public class ScareWhenObjectInteract : MonoBehaviour
     [SerializeField] Interactable interactable;
     List<Collider> collidersInsideTriggerZone = new List<Collider>();
 
-    const float scareAmount = 20f;
+    const float scareAmount = 50f;
 
     private void Start() {
         interactable.OnInteract.AddListener(() => {

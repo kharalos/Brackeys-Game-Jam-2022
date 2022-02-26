@@ -12,7 +12,6 @@ public class PatrolState : AIState
 
     public void Enter(AIAgent agent){
         agent.navAgent.speed = 1f;
-        agent.animator.SetTrigger("walk");
         patrolNumber = 0;
         patrolLength = agent.patrolPoints.Length;
     }
@@ -29,6 +28,5 @@ public class PatrolState : AIState
     }
     public void Exit(AIAgent agent){
         agent.navAgent.speed = 3f;
-        agent.animator.SetTrigger("idle");
     }
 }

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 904260632128492254}
   m_Layer: 3
-  m_Name: Patrol Points (1)
-  m_TagString: Untagged
+  m_Name: Cover Place (1)
+  m_TagString: Cover
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 294b148d9abcb17499bcb3d7849b6870, type: 2}
+  - {fileID: 2100000, guid: 961c5c54d7dd54741817e7f126d56c0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,7 +172,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 294b148d9abcb17499bcb3d7849b6870, type: 2}
+  - {fileID: 2100000, guid: 961c5c54d7dd54741817e7f126d56c0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

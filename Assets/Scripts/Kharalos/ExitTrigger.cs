@@ -12,6 +12,7 @@ public class ExitTrigger : MonoBehaviour
     {
         if(other.CompareTag("Staff") || other.CompareTag("Customer")){
             Debug.Log(other.name + " has ran away");
+            Destroy(other.gameObject);
         }
     }
 }
