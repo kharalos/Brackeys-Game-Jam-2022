@@ -84,7 +84,7 @@ public class PlayerInteraction : MonoBehaviour
                     //UpdateUI(true, interactable);
                     UpdateUI(false, interactable);
 
-
+                    FindObjectOfType<GhostAnimator>().TriggerInteract();
                     if (ScareAbility.InteractablesWithinPlayer.Contains(interactable)) {
                         ScareAbility.InteractablesWithinPlayer.Remove(interactable);
                     }
