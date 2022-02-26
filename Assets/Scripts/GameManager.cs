@@ -28,9 +28,15 @@ public class GameManager : MonoBehaviour {
     [SerializeField] GameObject retryScreenUI;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] Button retryButton;
-    
+    [Header("CustomerSpawn")]
+    [SerializeField] GameObject customerPrefab;
+    [SerializeField] float minDesiredCustomers = 12;
+    [SerializeField] Transform respawnPoint;
+    [SerializeField] List<Transform> patrolPointsOnMap;
+    //[SerializeField] float respawnTimer;
+    public float currentCustomerCount;
 
-    public float currentScore = 0;
+    [HideInInspector] public float currentScore = 0;
     float currentTimer;
     public event Action OnTimerReachesZero;
     public event Action OnScoreIncrease;
@@ -96,6 +102,10 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    private void Start() {
+        currentCustomerCount = FindObjectsOfType<Customer>().Length;
+    }
+
     private void Update() {
 
         //Handle Timer
@@ -116,6 +126,20 @@ public class GameManager : MonoBehaviour {
             //Time.timeScale = 0;
             retryScreenUI.SetActive(true);
             scoreText.text = $"Score: {currentScore}!";
+        }
+
+        //handle CustomerSpawn
+        {
+            if (currentCustomerCount < minDesiredCustomers) {
+                var go = GameObject.Instantiate(customerPrefab, respawnPoint.position, respawnPoint.rotation);
+                currentCustomerCount++;
+
+                var points = new Transform[2];
+                points[0] = patrolPointsOnMap[UnityEngine.Random.Range(0, patrolPointsOnMap.Count)];
+                points[1] = patrolPointsOnMap[UnityEngine.Random.Range(0, patrolPointsOnMap.Count)];
+
+                go.GetComponent<AgentCustomer>().patrolPoints = points;
+            }
         }
     }
 }
