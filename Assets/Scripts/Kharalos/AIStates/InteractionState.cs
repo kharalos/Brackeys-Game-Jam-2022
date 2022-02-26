@@ -16,6 +16,7 @@ public class InteractionState : AIState
         //agent.animator.SetTrigger("run");
         SetData(agent.interactionPoints[0]);
         agent.navAgent.SetDestination(targetPos);
+        agent.navAgent.speed = 3f;
     }
     private void SetData(Transform interPoint){
         AIInteractionData data = interPoint.GetComponent<AIInteractionPoint>().GetData();
@@ -35,15 +36,15 @@ public class InteractionState : AIState
                     agent.transform.rotation = Quaternion.Slerp(agent.transform.rotation, targetRot, Time.deltaTime * 5);
                     if(!interacting){
                         interacting = true;
-                        //agent.animator.SetTrigger(animationKey);
-                        Debug.Log(animationKey);
+                        agent.animator.SetTrigger(animationKey);
                         //interaction
+                        agent.interactable.Interact();
                     }
                     else
                     {
                         interactionTimer -= Time.deltaTime;
                         if(interactionTimer < 0.0f){
-
+                            agent.stateMachine.ChangeState(AIStateId.Idle);
                         }
                     }
                 }
@@ -51,5 +52,6 @@ public class InteractionState : AIState
         }
     }
     public void Exit(AIAgent agent){
+        agent.interactionPoints = new Transform[0];
     }
 }

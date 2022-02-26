@@ -18,6 +18,8 @@ public abstract class Interactable : MonoBehaviour
 
     public Transform CanvasPlacement;
 
+    public Transform AIInteractPoint;
+
     public abstract string GetDescription();
     public abstract void Interact();
 

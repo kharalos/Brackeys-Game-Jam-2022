@@ -25,6 +25,7 @@ public class PatrolState : AIState
         agent.navAgent.SetDestination(agent.patrolPoints[patrolNumber].position);
         if(Vector3.Distance(agent.transform.position, agent.patrolPoints[patrolNumber].position) < 2f && patrolLength > 1)
             PatrolCycle();
+        if(agent.interactionPoints.Length > 0) agent.stateMachine.ChangeState(AIStateId.Idle); 
     }
     public void Exit(AIAgent agent){
         agent.navAgent.speed = 3f;
