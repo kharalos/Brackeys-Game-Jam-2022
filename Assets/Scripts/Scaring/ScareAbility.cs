@@ -77,7 +77,7 @@ public class ScareAbility : MonoBehaviour {
                 CurrentScareCooldown += scareCooldown;
 
                 OnScareAttack?.Invoke();
-
+                FindObjectOfType<GhostAnimator>().TriggerScare();
                 //scare audio
                 audioSource_scareSounds.clip = scareSounds[UnityEngine.Random.Range(0, scareSounds.Count)];
                 audioSource_scareSounds.pitch = UnityEngine.Random.Range(scareSound_pitchMin, scareSound_pitchMax);
