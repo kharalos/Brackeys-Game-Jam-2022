@@ -1774,6 +1774,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (7)
@@ -1917,6 +1941,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (10)
@@ -2191,6 +2239,26 @@ PrefabInstance:
     - target: {fileID: 307862226919942459, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
       propertyPath: m_Name
       value: interactable_mannequin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: m_Volume
+      value: 0.844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: MaxDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: MinDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
@@ -2700,6 +2768,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (8)
@@ -3658,6 +3750,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (5)
@@ -4530,6 +4646,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (1)
@@ -6314,6 +6454,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: interactable_mannequin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: m_Volume
+      value: 0.844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: MaxDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: MinDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
 --- !u!4 &772891942 stripped
@@ -6591,7 +6751,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6004183937560037482, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
-  m_audioClip: {fileID: 8300000, guid: eb982597482f4fd4cbaaf9a708854379, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a3ab73607e2ea3043b222173ba271d35, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8444,6 +8604,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (2)
@@ -8518,6 +8702,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (3)
@@ -8778,6 +8986,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (6)
@@ -9538,6 +9770,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (4)
@@ -11342,6 +11598,30 @@ PrefabInstance:
     - target: {fileID: 307862226919942459, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
       propertyPath: m_Name
       value: interactable_mannequin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: m_Volume
+      value: 0.844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: MaxDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: MinDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: DopplerLevel
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157308805544883993, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f56b64e74e3f4af498ca99425a2130cc, type: 3}
@@ -13430,6 +13710,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (11)
@@ -14480,6 +14784,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer
@@ -14973,6 +15301,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 491329534}
     m_Modifications:
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MaxDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2175031192824487207, guid: c831e3f7891402d47838aa5ae7f936b2, type: 2}
+    - target: {fileID: 261566781359760345, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3594938670937684568, guid: 3247ca19943fa534eb9f4850029f5889, type: 3}
       propertyPath: m_Name
       value: Customer (9)
