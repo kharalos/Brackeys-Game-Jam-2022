@@ -971,6 +971,7 @@ MonoBehaviour:
   patrolPoints: []
   interactionPoints: []
   targetLoc: {x: 0, y: 0, z: 0}
+  interactable: {fileID: 0}
   player: {fileID: 0}
 --- !u!1 &5166325821133018002
 GameObject:
@@ -1185,10 +1186,10 @@ SkinnedMeshRenderer:
   m_Materials:
   - {fileID: 8751037208777880567, guid: dab3b7e35a032704d8dbec46835f71b5, type: 3}
   - {fileID: 8352109133009716921, guid: dab3b7e35a032704d8dbec46835f71b5, type: 3}
-  - {fileID: 4835078630258379571, guid: dab3b7e35a032704d8dbec46835f71b5, type: 3}
-  - {fileID: 840180462676706196, guid: dab3b7e35a032704d8dbec46835f71b5, type: 3}
+  - {fileID: 2100000, guid: c958448308822454c911d9f7a6c6ade5, type: 2}
+  - {fileID: 2100000, guid: e9078cdfb1ddab4438bc462a052dab71, type: 2}
   - {fileID: -7361996128009682737, guid: dab3b7e35a032704d8dbec46835f71b5, type: 3}
-  - {fileID: -7771323690311922985, guid: dab3b7e35a032704d8dbec46835f71b5, type: 3}
+  - {fileID: 2100000, guid: e9078cdfb1ddab4438bc462a052dab71, type: 2}
   - {fileID: -8407464151491870013, guid: dab3b7e35a032704d8dbec46835f71b5, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
