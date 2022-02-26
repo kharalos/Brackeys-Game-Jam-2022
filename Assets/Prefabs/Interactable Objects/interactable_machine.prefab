@@ -1705,6 +1705,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7159182978174977001, guid: feb1e188b2830d847bd3220229f1cc89, type: 3}
+      propertyPath: interactable
+      value: 
+      objectReference: {fileID: 4180497827854174830}
     - target: {fileID: 8695450763368792598, guid: feb1e188b2830d847bd3220229f1cc89, type: 3}
       propertyPath: m_RootOrder
       value: 2

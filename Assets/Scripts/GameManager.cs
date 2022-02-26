@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour {
     [SerializeField] GameObject retryScreenUI;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] Button retryButton;
+    [SerializeField] float timerDecayRateIncrease = 1.3f;
+    [SerializeField] TMP_Text decayRateText;
+    [SerializeField] int decayRateStep = 50;
+    [SerializeField] float decayRateAnimScaleFactor = 1.5f;
+    [SerializeField] float decayRateAnimScaleDownRate = 1;
     [Header("CustomerSpawn")]
     [SerializeField] GameObject customerPrefab;
     [SerializeField] float minDesiredCustomers = 12;
@@ -40,6 +45,7 @@ public class GameManager : MonoBehaviour {
     float currentTimer;
     public event Action OnTimerReachesZero;
     public event Action OnScoreIncrease;
+    float currentTimerDecayRate = 1;
 
     public void SpawnPopupText(Vector3 position, string text) {
         var popupText = GameObject.Instantiate(popupTextPrefab, position, Quaternion.identity);
@@ -54,11 +60,37 @@ public class GameManager : MonoBehaviour {
         if (currentTimer > maxTimer) currentTimer = maxTimer;
     }
 
+    public void UpdateTimerDecayUI() {
+        float n = Mathf.Round(currentTimerDecayRate * 10.0f) * 0.1f;
+        decayRateText.text = $"-{n} /s";
+
+        //visual effects
+        if (currentScore != 0) StartCoroutine(TimerUIAnimation());
+        IEnumerator TimerUIAnimation() {
+            Transform t = decayRateText.gameObject.transform;
+            t.localScale *= decayRateAnimScaleFactor;
+            while (t.localScale.x > 1) {
+                float value = scoreAnimScaleDownRate * Time.deltaTime;
+                t.localScale = new Vector3(t.localScale.x / (1 + value), t.localScale.y / (1 + value), t.localScale.z / (1 + value));
+                yield return null;
+            }
+            t.localScale = Vector3.one;
+        }
+    }
+
     public void IncreaseScore() {
         currentScore += scoreIncreaseAmount;
         OnScoreIncrease?.Invoke();
 
         UpdateScore();
+
+
+        //Update Decay Rate.
+        if (currentScore % decayRateStep == 0) {
+            currentTimerDecayRate *= timerDecayRateIncrease;
+            UpdateTimerDecayUI();
+        }
+
 
         //visual effects
         StartCoroutine(ScoreAnimation());
@@ -67,7 +99,7 @@ public class GameManager : MonoBehaviour {
             Transform t = scoreUI.gameObject.transform;
             t.localScale *= scoreAnimScaleFactor;
             while (t.localScale.x > 1) {
-                float value = scoreAnimScaleDownRate * Time.deltaTime;
+                float value = decayRateAnimScaleDownRate * Time.deltaTime;
                 t.localScale = new Vector3(t.localScale.x/(1 + value), t.localScale.y/(1+value), t.localScale.z/(1 + value));
                 yield return null;
             }
@@ -104,6 +136,7 @@ public class GameManager : MonoBehaviour {
 
     private void Start() {
         currentCustomerCount = FindObjectsOfType<Customer>().Length;
+        UpdateTimerDecayUI();
     }
 
     private void Update() {
@@ -112,7 +145,7 @@ public class GameManager : MonoBehaviour {
         {
             //decay
             if (currentTimer > 0) {
-                currentTimer -= Time.deltaTime;
+                currentTimer -= Time.deltaTime*currentTimerDecayRate;
             }
             if (currentTimer <= 0) {
                 OnTimerReachesZero?.Invoke();
@@ -142,4 +175,6 @@ public class GameManager : MonoBehaviour {
             }
         }
     }
+    
+
 }
