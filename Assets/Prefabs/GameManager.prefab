@@ -44,5 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerUIBar: {fileID: 0}
-  maxTimer: 60
+  scoreUI: {fileID: 0}
+  maxTimer: 45
   timerIncreaseAmount: 10
+  scoreIncreaseAmount: 10
+  scoreAnimScaleFactor: 1.5
+  scoreAnimScaleDownRate: 1
+  popupTextPrefab: {fileID: 5918233751652446558, guid: 1fef39d6f31578948a0cc811429ed125, type: 3}
