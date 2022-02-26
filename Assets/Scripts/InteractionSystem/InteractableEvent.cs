@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class InteractableEvent : Interactable
 {
+    public GameObject prefab;
     public override string GetDescription()
     {
         //return "Hold to interact";

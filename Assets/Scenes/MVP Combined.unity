@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07654694, g: 0.101440504, b: 0.12251147, a: 1}
+  m_IndirectSpecularColor: {r: 0.07654661, g: 0.10144009, b: 0.12251114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -943,14 +943,6 @@ PrefabInstance:
     - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 210.85002
-      objectReference: {fileID: 0}
-    - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 210.85002
       objectReference: {fileID: 0}
     - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2701,17 +2693,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9121914653678866582, guid: b31f732a2ed57fa4080a2dfd1dd3c028, type: 3}
   m_PrefabInstance: {fileID: 1685339690}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &387451506 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3765128000508932425, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
-  m_PrefabInstance: {fileID: 3765128000760068923}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268d8d54264e4da4380b053630540e03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &395146563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3135,14 +3116,6 @@ PrefabInstance:
     - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 210.85002
-      objectReference: {fileID: 0}
-    - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 210.85002
       objectReference: {fileID: 0}
     - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6866,7 +6839,7 @@ PrefabInstance:
     - target: {fileID: 2320833679513586553, guid: 98c2119e51079aa478677618bc760d49, type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1615025503}
+      objectReference: {fileID: 0}
     - target: {fileID: 2320833679513586553, guid: 98c2119e51079aa478677618bc760d49, type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayRandomClip
@@ -10027,14 +10000,6 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 210.85002
-      objectReference: {fileID: 0}
-    - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 210.85002
-      objectReference: {fileID: 0}
-    - target: {fileID: 6776432016557507215, guid: f4d935941b3d81840b0c29607b248266, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.69603
       objectReference: {fileID: 0}
@@ -11976,17 +11941,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4461135204642494662, guid: 81fdfa233de9bee43b687a63936bff2b, type: 3}
   m_PrefabInstance: {fileID: 168855975}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1615025503 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2084181568928062787, guid: 98c2119e51079aa478677618bc760d49, type: 3}
-  m_PrefabInstance: {fileID: 852227145}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ccbe868b24aa642a0412969ddf29da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1615965976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 904260632128492254, guid: e12afef4b7a109640ac95df8d0d1b42e, type: 3}
@@ -16114,42 +16068,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: run._Clip
-      value: 
-      objectReference: {fileID: -9121621101649706817, guid: 8b5e4e3b1b931e44ca101e384a2ddc3f, type: 3}
-    - target: {fileID: 0}
-      propertyPath: idle._Clip
-      value: 
-      objectReference: {fileID: -9171516368259116194, guid: 8b5e4e3b1b931e44ca101e384a2ddc3f, type: 3}
-    - target: {fileID: 0}
-      propertyPath: scare._Clip
-      value: 
-      objectReference: {fileID: -6945076586018040393, guid: 8b5e4e3b1b931e44ca101e384a2ddc3f, type: 3}
-    - target: {fileID: 0}
-      propertyPath: scare2._Clip
-      value: 
-      objectReference: {fileID: -6945076586018040393, guid: 8b5e4e3b1b931e44ca101e384a2ddc3f, type: 3}
-    - target: {fileID: 0}
-      propertyPath: interact._Clip
-      value: 
-      objectReference: {fileID: 1701519168366769839, guid: 8b5e4e3b1b931e44ca101e384a2ddc3f, type: 3}
-    - target: {fileID: 0}
-      propertyPath: interact2._Clip
-      value: 
-      objectReference: {fileID: 1701519168366769839, guid: 8b5e4e3b1b931e44ca101e384a2ddc3f, type: 3}
-    - target: {fileID: 0}
-      propertyPath: playerInteraction
-      value: 
-      objectReference: {fileID: 387451506}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98d7ff2bc85042245acc4b52dc5cc7b7, type: 3}
 --- !u!1001 &5717234706061949731
@@ -16259,7 +16177,7 @@ PrefabInstance:
       objectReference: {fileID: 1566394068}
     - target: {fileID: 2216309470736944201, guid: b7a99cfff87d4ef41b0e41c54bc928aa, type: 3}
       propertyPath: maxTimer
-      value: 45
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2216309470736944201, guid: b7a99cfff87d4ef41b0e41c54bc928aa, type: 3}
       propertyPath: scoreText

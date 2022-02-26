@@ -11,7 +11,7 @@ public class PlayRandomAudio : MonoBehaviour
     [SerializeField] bool playOnAwake = false;
 
     AudioSource source;
-    private void Start() {
+    private void OnEnable() {
         source = GetComponent<AudioSource>();
         if(playOnAwake) PlayRandomClip();
     }

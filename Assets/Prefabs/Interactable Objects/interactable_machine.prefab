@@ -237,6 +237,7 @@ MonoBehaviour:
         m_CallState: 2
   CanvasPlacement: {fileID: 4180497829379402086}
   AIInteractPoint: {fileID: 0}
+  prefab: {fileID: 7538467329877542727}
 --- !u!82 &6156698739185855729
 AudioSource:
   m_ObjectHideFlags: 0

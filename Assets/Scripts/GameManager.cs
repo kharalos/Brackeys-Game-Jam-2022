@@ -75,22 +75,11 @@ public class GameManager : MonoBehaviour {
     }
 
     public void ReloadScene() {
-        //StartCoroutine(SceneSwitch());
-        //IEnumerator SceneSwitch() {
-        //    Time.timeScale = 1;
-        //    Scene scene = SceneManager.GetActiveScene();
-        //    AsyncOperation load = SceneManager.UnloadSceneAsync(scene);
-        //    yield return load;
-        //    yield return null;
-        //    SceneManager.LoadScene(scene.name);
-        //}
-
         StartCoroutine(SceneSwitch());
         IEnumerator SceneSwitch(){
-            var load = SceneManager.LoadSceneAsync(2);
+            var load = SceneManager.LoadSceneAsync(0);
             yield return load;
-            SceneManager.LoadSceneAsync(0);
-            
+            SceneManager.UnloadScene(0);
         }
     }
 

@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 6143307539364632629}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.179, y: 1.49, z: -9.066}
-  m_LocalScale: {x: 210.85, y: 210.85, z: 210.85}
+  m_LocalScale: {x: 210.85, y: 210.85002, z: 210.85002}
   m_Children:
   - {fileID: 6449155188063593877}
   - {fileID: 6776432017896549089}
@@ -208,6 +208,7 @@ MonoBehaviour:
         m_CallState: 2
   CanvasPlacement: {fileID: 6449155188063593877}
   AIInteractPoint: {fileID: 0}
+  prefab: {fileID: 6143307539364632629}
 --- !u!82 &6181394794051887559
 AudioSource:
   m_ObjectHideFlags: 0
