@@ -29,5 +29,6 @@ public class LightSwitch : Interactable
         isOn = !isOn;
         OnInteract.Invoke();
         UpdateLight();
+        if(!isOn) FindObjectOfType<MapPointsManager>().TaskAssigner(this);
     }
 }

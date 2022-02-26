@@ -14,11 +14,11 @@ public class IdleState : AIState
     }
     public void Update(AIAgent agent){
         timer -= Time.deltaTime;
-        if(agent.patrolPoints.Length > 0){
-            if(timer < 0.0f) agent.stateMachine.ChangeState(AIStateId.Patrol); 
-        }
-        else if(agent.interactionPoints.Length > 0){
+        if(agent.interactionPoints.Length > 0){
             if(timer < 0.0f) agent.stateMachine.ChangeState(AIStateId.Interaction); 
+        }
+        else if(agent.patrolPoints.Length > 0){
+            if(timer < 0.0f) agent.stateMachine.ChangeState(AIStateId.Patrol); 
         }
     }
     public void Exit(AIAgent agent){

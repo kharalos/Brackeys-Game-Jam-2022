@@ -12,6 +12,7 @@ public class AIAgent : MonoBehaviour
     public Transform[] patrolPoints;
     public Transform[] interactionPoints;
     public Vector3 targetLoc;
+    public Interactable interactable;
     [HideInInspector] public Transform player;
 
     void Start()

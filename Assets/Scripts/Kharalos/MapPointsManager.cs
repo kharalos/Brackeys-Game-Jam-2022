@@ -81,4 +81,25 @@ public class MapPointsManager : MonoBehaviour
             customerAgents[i].patrolPoints[0] = customerPoints[i];
         }
     }
+
+    public void TaskAssigner(Interactable interactable){
+        if(interactable.AIInteractPoint == null) {Debug.Log("Interactable has no assigned Interactable Point for an agent."); return; }
+
+        AIAgent chosenAgent = null;
+        float minDist = Mathf.Infinity;
+
+        foreach (AIAgent agent in staffAgents)
+        {
+            float dist = Vector3.Distance(agent.transform.position, interactable.AIInteractPoint.position);
+            if (dist < minDist)
+            {
+                chosenAgent = agent;
+                minDist = dist;
+            }
+        }
+
+        chosenAgent.interactionPoints = new Transform[1];
+        chosenAgent.interactionPoints[0] = interactable.AIInteractPoint;
+        chosenAgent.interactable = interactable;
+    }
 }
