@@ -8266,6 +8266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera - new
       objectReference: {fileID: 0}
+    - target: {fileID: 6242406981883080663, guid: f6e32fd61d80c2f41adb79fbcdf36f99, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 865621582, guid: f6e32fd61d80c2f41adb79fbcdf36f99, type: 3}
     - {fileID: 865621583, guid: f6e32fd61d80c2f41adb79fbcdf36f99, type: 3}
@@ -9131,7 +9135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1710079157}
   m_Layer: 0
-  m_Name: Staff
+  m_Name: Staffs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
