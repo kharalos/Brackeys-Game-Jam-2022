@@ -12,7 +12,7 @@ public class ScareWhenObjectInteract : MonoBehaviour
     private void Start() {
         interactable.OnInteract.AddListener(() => {
             foreach (var item in collidersInsideTriggerZone) {
-                item.GetComponent<Customer>().ScareMe(scareAmount);
+                item.GetComponent<Customer>()?.ScareMe(scareAmount);
             }
         });
     }

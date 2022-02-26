@@ -31,8 +31,9 @@ public class ScareAbility : MonoBehaviour {
     public float CurrentMana { get; private set; }
     public float CurrentScareCooldown { get; private set; }
 
-    List<Collider> collidersInsideTriggerZone = new List<Collider>();
-    
+    List<Collider> customersInsideTriggerZone = new List<Collider>();
+    List<Collider> staffInsideTriggerZone = new List<Collider>();
+
 
     /// <summary>
     /// if there is enough mana, it will spend the amount and return true.
@@ -69,9 +70,14 @@ public class ScareAbility : MonoBehaviour {
                 && CurrentScareCooldown <= 0
                 && InteractablesWithinPlayer.Count == 0) {
 
-                foreach (var item in collidersInsideTriggerZone) {
+                //deal with customers.
+                foreach (var item in customersInsideTriggerZone) {
                     //Debug.Log($"Boo! {item.gameObject.name}");
                     item.GetComponent<Customer>().ScareMe(scareAmount);
+                }
+                //deal with staff
+                foreach (var item in staffInsideTriggerZone) {
+                    item.GetComponent<Staff>().ScareMe();
                 }
                 CurrentMana -= manaCost_scare;
                 CurrentScareCooldown += scareCooldown;
@@ -96,12 +102,18 @@ public class ScareAbility : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Customer") {
-            collidersInsideTriggerZone.Add(other);
+            customersInsideTriggerZone.Add(other);
+        }
+        if (other.gameObject.tag == "Staff") {
+            staffInsideTriggerZone.Add(other);
         }
     }
     private void OnTriggerExit(Collider other) {
-        if (other.gameObject.tag == "Customer" && collidersInsideTriggerZone.Contains(other)) {
-            collidersInsideTriggerZone.Remove(other);
+        if (other.gameObject.tag == "Customer" && customersInsideTriggerZone.Contains(other)) {
+            customersInsideTriggerZone.Remove(other);
+        }
+        if (other.gameObject.tag == "Staff" && staffInsideTriggerZone.Contains(other)) {
+            staffInsideTriggerZone.Remove(other);
         }
     }
 }
