@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 2320833679513586553}
   - component: {fileID: 2320833679513586556}
   - component: {fileID: 5610628365810412773}
-  - component: {fileID: 2084181568928062787}
+  - component: {fileID: 501702907730099176}
   m_Layer: 0
   m_Name: LightSwitch
   m_TagString: Untagged
@@ -921,7 +921,7 @@ MonoBehaviour:
   OnInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2084181568928062787}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayRandomAudio, Assembly-CSharp
         m_MethodName: PlayRandomClip
         m_Mode: 1
@@ -934,6 +934,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   CanvasPlacement: {fileID: 5036730065136304739}
+  AIInteractPoint: {fileID: 0}
   m_Light:
   - {fileID: 0}
   isOn: 1
@@ -1046,7 +1047,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2084181568928062787
+--- !u!114 &501702907730099176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1055,12 +1056,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2320833679513586554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ccbe868b24aa642a0412969ddf29da, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c4a9cd70ac773647b16c901a6e3759e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pitchMin: 1
-  pitchMax: 1
-  clips:
+  clipsSwitchOn:
+  - {fileID: 8300000, guid: 475388846133f604ab80c10ee8c20e51, type: 3}
+  clipsSwitchOff:
   - {fileID: 8300000, guid: 0c722da400c642e4284a147b0ff3cc29, type: 3}
   - {fileID: 8300000, guid: fba48842d9b73cf46a5079b2d0e984d9, type: 3}
 --- !u!1 &2320833679556769987
