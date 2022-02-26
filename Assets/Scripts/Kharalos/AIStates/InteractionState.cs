@@ -17,6 +17,7 @@ public class InteractionState : AIState
         SetData(agent.interactionPoints[0]);
         agent.navAgent.SetDestination(targetPos);
         agent.navAgent.speed = 3f;
+        interacting = false;
     }
     private void SetData(Transform interPoint){
         AIInteractionData data = interPoint.GetComponent<AIInteractionPoint>().GetData();
@@ -39,6 +40,7 @@ public class InteractionState : AIState
                         agent.animator.SetTrigger(animationKey);
                         //interaction
                         agent.interactable.Interact();
+                        agent.interactionPoints = new Transform[0];
                     }
                     else
                     {
@@ -52,6 +54,6 @@ public class InteractionState : AIState
         }
     }
     public void Exit(AIAgent agent){
-        agent.interactionPoints = new Transform[0];
+
     }
 }
