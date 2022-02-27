@@ -28,7 +28,7 @@ public class ScaredState : AIState
         {
             if (agent.navAgent.remainingDistance <= agent.navAgent.stoppingDistance)
             {
-                if (!agent.navAgent.hasPath || agent.navAgent.velocity.sqrMagnitude == 0f)
+                if (agent.navAgent.velocity.sqrMagnitude < 1f)
                 {
                     if(!reachedPlace){
                         reachedPlace = true;
