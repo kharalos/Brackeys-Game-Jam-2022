@@ -1,3 +1,4 @@
+[<img src="https://img.itch.zone/aW1nLzgyNzIzOTkucG5n/original/eO0cKw.png" alt="drawing" width="500"/>](https://nielisson.itch.io/ghosts-arent-real)
 # Ghosts aren't real
 A collaborated game made by a team for Brackey's Game Jam 2022
 
