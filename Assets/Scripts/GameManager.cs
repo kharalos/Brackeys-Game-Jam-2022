@@ -166,6 +166,9 @@ public class GameManager : MonoBehaviour {
             if (currentCustomerCount < minDesiredCustomers) {
                 var go = GameObject.Instantiate(customerPrefab, respawnPoint.position, respawnPoint.rotation);
                 currentCustomerCount++;
+                var points = new Transform[1];
+                points[0] = patrolPointsOnMap[UnityEngine.Random.Range(0, patrolPointsOnMap.Count)];
+                go.GetComponent<AgentCustomer>().patrolPoints = points;
             }
         }
     }
