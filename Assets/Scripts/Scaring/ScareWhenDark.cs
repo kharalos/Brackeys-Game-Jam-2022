@@ -14,7 +14,7 @@ public class ScareWhenDark : MonoBehaviour
             if (lightSwitch.isOn == false) {
                 foreach (var item in collidersInsideTriggerZone) {
                     Customer customer = item.GetComponent<Customer>();
-                    StartCoroutine(ScareCustomerWhileDark());
+                    if (customer != null) StartCoroutine(ScareCustomerWhileDark());
                     IEnumerator ScareCustomerWhileDark() {
                         while (lightSwitch.isOn == false) {
                             customer.ScareMe(scareRate * Time.deltaTime);
@@ -29,7 +29,7 @@ public class ScareWhenDark : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Customer" || other.gameObject.tag == "Staff") {
+        if (other.gameObject.tag == "Customer") {
             collidersInsideTriggerZone.Add(other);
         }
     }
