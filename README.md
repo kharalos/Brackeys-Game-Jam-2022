@@ -1,8 +1,8 @@
 [<img src="https://img.itch.zone/aW1nLzgyNzIzOTkucG5n/original/eO0cKw.png" alt="drawing" width="500"/>](https://nielisson.itch.io/ghosts-arent-real)
-# Ghosts aren't real
-A collaborated game made by a team for Brackey's Game Jam 2022
+# Ghosts Aren't Real
+A game made in 7 days by a team for Brackeys Game Jam 2022.1
 
-The Team:
+### The Team:
 
 David Bock - Music
 https://david-bock.webflow.io/
